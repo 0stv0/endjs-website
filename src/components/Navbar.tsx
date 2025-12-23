@@ -11,6 +11,12 @@ const Navbar = () =>
 
     return (
         <>
+            <ul style={{left: opened ? '0' : '-100%'}} className={styles.mpages}>
+                <li><a href='/docs'>Docs</a></li>
+                <li><a href='https://www.npmjs.com/package/endjs' target='_blank'>NPM</a></li>
+                <li><a href='https://github.com/0stv0/endjs' target='_blank'>GitHub</a></li>
+                <p>2025 &copy; Created by stevku<br />MIT License</p>
+            </ul>
             <div className={styles.nav_wrapper}>
                 <nav
                     className={styles.nav}
@@ -22,14 +28,14 @@ const Navbar = () =>
                         height={50}
                     />
                     <ul>
-                        <li><a href=''>Docs</a></li>
-                        <li><a href=''>NPM</a></li>
-                        <li><a href=''>GitHub</a></li>
+                        <li><a href='/docs'>Docs</a></li>
+                        <li><a href='https://www.npmjs.com/package/endjs' target='_blank'>NPM</a></li>
+                        <li><a href='https://github.com/0stv0/endjs' target='_blank'>GitHub</a></li>
                     </ul>
                     <Burger 
                         opened={opened}
                         onClick={toggle}
-                        size="lg"
+                        size="md"
                         hiddenFrom='sm'
                     />
                 </nav>

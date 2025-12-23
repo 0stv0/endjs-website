@@ -2,6 +2,31 @@
     width: 100%;
     height: 800px;
     position: relative;
+    overflow: hidden;
+
+    .shadows > .shadow
+        position: absolute;
+        top: -100px;
+        left: -100px;
+        width: 500px;
+        height: 500px;
+        background: #7b32a8;
+        border-radius: 45%;
+        filter: blur(150px);
+        opacity: 40%;
+        z-index: -1;
+
+        &:nth-child(2)
+            position: absolute;
+            left: calc( 100% - 250px);
+            top: calc( 100% - 250px);
+            width: 500px;
+            height: 500px;
+            background: #622463;
+            border-radius: 45%;
+            filter: blur(150px);
+            opacity: 50%;
+            z-index: -1;
 
     .welcome
         position: absolute;
@@ -53,7 +78,85 @@
                 padding: 15px;
                 color: #fff;
 
-// 1050
 @media (min-width: 1050px)
     .console
         display: flex !important;
+
+.about
+    width: 100%;
+    padding: 50px 25px;
+    background: #060606;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    
+    h1
+        color: #7b32a8;
+        font-size: 45px;
+
+    .boxes
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 10px;
+        flex-wrap: wrap;
+
+        .box
+            padding: 25px;
+            width: 350px;
+            background: rgba(255, 255, 255, 0.01);
+            border-radius: 4px;
+
+            .title
+                display: flex;
+                width: 100%;
+                align-items: center;
+                gap: 5px;
+
+                h5
+                    font-size: 18px;
+                    color: #7b32a8;
+
+            p
+                color: #636363;
+                font-size: 14px;
+                margin-top: 5px;
+
+.footer
+    width: 100%;
+    padding: 15px;
+    background: #060606;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    
+    p
+        color: #ffffff50;
+
+    .socials
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+.ready
+    width: 100%;
+    padding: 50px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    h3
+        font-size: 25px;
+        color: #fff;
+
+    .btns
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
