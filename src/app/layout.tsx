@@ -1,9 +1,11 @@
 'use client';
 
+import '@mantine/core/styles.css';
 import '@/sass/global.sass';
 
 import { ReactNode, Suspense } from "react";
 import { Space_Grotesk } from 'next/font/google';
+import { MantineProvider } from '@mantine/core';
 
 const font       = Space_Grotesk();
 const RootLayout = ({children}: {children: Readonly<ReactNode>}) =>
@@ -18,7 +20,9 @@ const RootLayout = ({children}: {children: Readonly<ReactNode>}) =>
                 </head>
                 <body suppressHydrationWarning className={`${font.className}`}>
                     <Suspense>
-                        {children}
+                        <MantineProvider defaultColorScheme='dark'>
+                            {children}
+                        </MantineProvider>
                     </Suspense>
                 </body>
             </html>
