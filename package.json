@@ -18,6 +18,10 @@
     "next": "16.1.1",
     "react": "19.2.3",
     "react-dom": "19.2.3",
+    "react-markdown": "^10.1.0",
+    "rehype-highlight": "^7.0.2",
+    "remark-directive": "^4.0.0",
+    "remark-gfm": "^4.0.1",
     "sass": "^1.97.1"
   },
   "devDependencies": {
